@@ -1,0 +1,36 @@
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment3</title>
+</head>
+
+<body>
+
+<form>
+  Enter a SubReddit: <input type="text" id="Search">
+  <input type="button" value="Submit" id="btn">
+</form>
+
+<script type="template/handlebars" id="RedditInfoTemplate">
+ 	{{#each data}}
+ 		<div class="data">
+ 			<p>{{score}}</p>
+ 			<p><a href="{{url}}">{{title}}</a></p>
+ 			<p>{{countComment}}</p>
+ 			<p>{{archived}}</p>
+		</div>
+	{{else}}
+		<p>No information is found.</p>
+ 	{{/each}}
+</script>
+
+
+	<script src = "jquery-3.1.0.js"></script>
+	<script src = "handlebars-v4.0.5.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+
+	<div id="subredditInfo"></div>
+
+</body>
+</html>
